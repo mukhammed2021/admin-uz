@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+   @@include('html/_head.htm',{ "title":"Вход" })
+   <body>
+      <div class="wrapper wrapper--decor">
+         <div class="login">
+            <form action="#" class="login__form form-login">
+               <h1 class="form-login__title">Вход</h1>
+               <div class="form-login__item">
+                  <input autocomplete="off" type="text" name="login" required placeholder="Логин" class="form-login__input input">
+               </div>
+               <div class="form-login__item">
+                  <input autocomplete="off" type="password" name="password" required placeholder="Пароль" class="form-login__input input">
+               </div>
+               <div class="form-login__item">
+                  <select name="form[]" data-class-modif="form">
+                     <option value="position" selected>Должность</option>
+                     <option value="admin">Админ</option>
+                     <option value="kassir">Кассир</option>
+                  </select>
+               </div>
+               <div class="form-login__line">
+                  <div class="checkbox">
+                     <input id="c_1" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                     <label for="c_1" class="checkbox__label"><span class="checkbox__text">Запомнить меня</span></label>
+                  </div>
+                  <a href="#" class="form-login__link">Забыли пароль?</a>
+               </div>
+               <a data-login href="#" class="form-login__button button">Войти</a>
+               <div class="form-login__line form-login__line--short">
+                  <p class="form-login__text">Нет аккаунта?</p>
+                  <a href="#" class="form-login__link">Зарегистрироваться</a>
+               </div>
+            </form>
+         </div>
+      </div>
+      @@include('html/_js.htm',{})
+   </body>
+</html>

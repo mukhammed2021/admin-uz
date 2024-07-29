@@ -1,0 +1,25 @@
+<div id="popup" aria-hidden="true" class="popup">
+   <div class="popup__wrapper">
+      <div class="popup__content">
+         <form action="#" class="popup__body">
+            <h2 class="popup__title">Изменить сумму</h2>
+            <div class="popup__line">
+               <label for="amount-popup" class="popup__label">Сумма</label>
+               <input
+                  id="amount-popup"
+                  autocomplete="off"
+                  type="number"
+                  name="form[]"
+                  required
+                  placeholder="Введите сумму"
+                  class="popup__input input"
+               />
+            </div>
+            <div class="popup__actions">
+               <button data-close type="submit" class="popup__button">Изменить</button>
+               <button data-close type="submit" class="popup__button popup__button--transparent">Отменить</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>

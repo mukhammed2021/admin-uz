@@ -1,0 +1,120 @@
+.wrapper--decor {
+   position: relative;
+   &::before,
+   &::after {
+      content: "";
+      position: absolute;
+      width: 158.137774%; /* 2089/1321 */
+      height: 139.261492%; /* 1848/1327 */
+      z-index: -1;
+      background: url("@img/decor/decor-01.svg") center / contain no-repeat;
+   }
+   &::before {
+      top: -70%;
+      left: -90%;
+   }
+   &::after {
+      right: -85%;
+      bottom: -90%;
+      rotate: -180deg;
+   }
+}
+
+.login {
+   min-height: 100svh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   width: min(toRem(350), 100%);
+   margin-inline: auto;
+   // .login__form
+   &__form {
+      padding: toRem(15);
+   }
+}
+.form-login {
+   border-radius: toRem(10);
+   background: var(--color-white);
+   font-family: Roboto;
+   display: grid;
+   gap: toRem(26);
+   // .form-login__title
+   &__title {
+      text-align: center;
+      font-weight: 700;
+      font-size: toRem(28);
+      line-height: 150%; /* 42/28 */
+      color: #5273e7;
+   }
+   // .form-login__item
+   &__item {
+      .select {
+         &__title {
+            background-color: #f0f0f0;
+            border: none;
+         }
+         &__value {
+            padding: toRem(12) toRem(21);
+         }
+         &__content {
+            font-size: toRem(14);
+            line-height: 150%; /* 21/14 */
+            color: #22285e;
+         }
+         &__options {
+            border: none;
+            background-color: #f0f0f0;
+         }
+         &__option {
+            line-height: 150%;
+            font-size: toRem(14);
+            padding: toRem(12) toRem(21);
+         }
+      }
+   }
+   // .form-login__input
+   &__input {
+      padding: toRem(12) toRem(21);
+      font-size: toRem(14);
+      line-height: 150%; /* 21/14 */
+      color: #22285e;
+      border: none;
+      background-color: #f0f0f0;
+      &:focus-visible {
+         outline: toRem(1) solid #5273e7;
+      }
+   }
+   // .form-login__line
+   &__line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      // .form-login__line--short
+      &--short {
+         justify-content: center;
+         gap: toRem(10);
+      }
+   }
+   // .form-login__link
+   &__link {
+      font-size: toRem(14);
+      line-height: 150%; /* 21/14 */
+      color: #5273e7;
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+   // .form-login__button
+   &__button {
+      background-color: #5273e7;
+      padding-block: toRem(9);
+   }
+   // .form-login__text
+   &__text {
+      font-size: toRem(12);
+      color: #7a7e9e;
+      line-height: 150%; /* 18/12 */
+   }
+}

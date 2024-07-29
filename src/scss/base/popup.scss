@@ -1,0 +1,138 @@
+body::after {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease 0s;
+	pointer-events: none;
+	z-index: 149;
+}
+.popup-show body::after {
+	opacity: 1;
+}
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 30px 10px;
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	pointer-events: none;
+}
+.popup_show {
+	z-index: 150;
+	visibility: visible;
+	overflow: auto;
+	pointer-events: auto;
+}
+.popup_show .popup__content {
+	visibility: visible;
+	transform: scale(1);
+}
+.popup__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100%;
+	flex: 1 1 auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popup__content {
+	visibility: hidden;
+	transform: scale(0);
+	transition: transform 0.3s ease 0s;
+	background-color: #fff;
+	padding: toRem(37) toRem(43);
+	width: 100%;
+	max-width: toRem(461);
+	border-radius: toRem(20);
+	.lock & {
+		visibility: visible;
+	}
+}
+
+.popup__body {
+	display: grid;
+	gap: toRem(40);
+}
+
+.popup__title {
+	text-align: center;
+	font-size: toRem(30);
+	font-weight: 700;
+	line-height: 120%;
+}
+
+.popup__line {
+	position: relative;
+}
+
+.popup__label {
+	position: absolute;
+	top: 0.5rem;
+	left: 1rem;
+	font-size: 0.75rem;
+	line-height: 125%;
+	color: #5e6366;
+}
+
+.popup__input {
+	padding-top: toRem(30);
+	padding-bottom: toRem(8);
+	padding-inline: toRem(16);
+}
+
+.popup__actions {
+	display: flex;
+	flex-direction: column;
+	gap: toRem(20);
+}
+
+.popup__button {
+	border-radius: toRem(12);
+	padding: toRem(17) toRem(16);
+	background-color: var(--color-blue);
+	width: 100%;
+	color: #fff;
+	font-size: toRem(20);
+	line-height: 120%;
+	border: toRem(1) solid transparent;
+	transition:
+		background-color 0.3s,
+		color 0.3s,
+		border 0.3s;
+}
+
+.popup__button--transparent {
+	background-color: transparent;
+	border: toRem(1) solid var(--color-blue);
+	color: var(--color-blue);
+}
+
+@media (max-width: $mobileSmall) {
+	.popup__content {
+		padding: toRem(15) toRem(10);
+	}
+}
+
+@media (any-hover: hover) {
+	.popup__button:hover {
+		background-color: var(--color-white);
+		color: var(--color-blue);
+		border: toRem(1) solid var(--color-blue);
+	}
+	.popup__button--transparent:hover {
+		background-color: var(--color-blue);
+		color: var(--color-white);
+		border: toRem(1) solid transparent;
+	}
+}

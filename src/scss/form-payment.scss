@@ -1,0 +1,91 @@
+.payment-form {
+   border: toRem(3) solid #dde2e6;
+   // .payment-form__header
+   &__header {
+      display: grid;
+      gap: toRem(20);
+      &:not(:last-child) {
+         margin-bottom: toRem(40);
+      }
+   }
+   // .payment-form__title
+   &__title {
+      font-size: toRem(24);
+      font-weight: 700;
+      line-height: 120.833333%; /* 29/24 */
+   }
+   // .payment-form__place
+   &__place {
+      font-size: toRem(18);
+      line-height: 122.222222%; /* 22/18 */
+   }
+   // .payment-form__time
+   &__time {
+      font-size: toRem(18);
+      line-height: 122.222222%; /* 22/18 */
+   }
+   // .payment-form__quantity
+   &__quantity {
+      text-align: center;
+      &:not(:last-child) {
+         margin-bottom: toRem(40);
+      }
+   }
+   // .payment-form__label
+   &__label {
+      font-size: toRem(18);
+      line-height: 122.222222%; /* 22/18 */
+      &:not(:last-child) {
+         margin-bottom: toRem(40);
+      }
+   }
+   // .payment-form__footer
+   &__footer {
+   }
+}
+.footer-payment-form {
+   display: grid;
+   gap: toRem(44);
+   // .footer-payment-form__line
+   &__line {
+      position: relative;
+   }
+   // .footer-payment-form__label
+   &__label {
+      position: absolute;
+      top: toRem(8);
+      left: toRem(16);
+      font-size: toRem(12);
+      line-height: 125%; /* 15/12 */
+      color: #5e6366;
+   }
+   // .footer-payment-form__input
+   &__input {
+      padding-top: toRem(30);
+      padding-bottom: toRem(8);
+   }
+   // .footer-payment-form__items
+   &__items {
+      display: flex;
+      align-items: center;
+      gap: toRem(30);
+   }
+   // .footer-payment-form__item
+   &__item {
+   }
+   // .footer-payment-form__title
+   &__title {
+      color: #7f7f7f;
+      font-size: toRem(18);
+      line-height: 122.222222%; /* 22/18 */
+      &:not(:last-child) {
+         margin-bottom: toRem(5);
+      }
+   }
+   // .footer-payment-form__result
+   &__result {
+      font-size: toRem(18);
+      font-weight: 700;
+      line-height: 122.222222%; /* 22/18 */
+   }
+}
